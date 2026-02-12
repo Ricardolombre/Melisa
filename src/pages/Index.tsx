@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import ValentineEnvelope from '@/components/ValentineEnvelope';
 import ValentineCard from '@/components/ValentineCard';
 import { MadeWithDyad } from "@/components/made-with-dyad";
@@ -42,33 +42,19 @@ const Index = () => {
       </div>
 
       <main className="relative z-10 flex flex-col items-center justify-center w-full max-w-4xl">
-        <AnimatePresence mode="wait">
-          {!isOpen ? (
-            <motion.div
-              key="envelope"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 1.1, filter: "blur(10px)" }}
-              transition={{ duration: 0.5 }}
-              className="flex flex-col items-center gap-8"
-            >
-              <h1 className="text-4xl md:text-5xl font-serif text-rose-600 font-bold text-center mb-8">
-                Un petit message pour toi...
-              </h1>
-              <ValentineEnvelope isOpen={isOpen} onOpen={() => setIsOpen(true)} />
-            </motion.div>
-          ) : (
-            <motion.div
-              key="card"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="w-full flex justify-center"
-            >
-              <ValentineCard />
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-12"
+        >
+          <h1 className="text-4xl md:text-5xl font-serif text-rose-600 font-bold">
+            {isOpen ? "Une surprise pour toi..." : "Tu as reçu un message !"}
+          </h1>
+        </motion.div>
+
+        <ValentineEnvelope isOpen={isOpen} onOpen={() => setIsOpen(true)}>
+          <ValentineCard />
+        </ValentineEnvelope>
       </main>
 
       <div className="fixed bottom-4 w-full">
