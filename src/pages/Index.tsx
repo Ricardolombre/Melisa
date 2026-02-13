@@ -138,9 +138,10 @@ const Index = () => {
               transition={{ type: "spring", damping: 12, stiffness: 100 }}
               className="w-full flex flex-col items-center px-4"
             >
-              <h1 className="text-3xl md:text-5xl font-serif text-rose-600 font-bold text-center mb-6 drop-shadow-sm">
+              <h1 className="text-xl sm:text-2xl md:text-5xl font-serif text-rose-600 font-bold text-center mb-6 drop-shadow-sm">
                 A toi ma petite femme ! ❤️
               </h1>
+
               <div className="w-full max-w-[320px] sm:max-w-sm">
                 <ValentineCard isAccepted={true} />
               </div>
