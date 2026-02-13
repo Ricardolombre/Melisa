@@ -10,7 +10,7 @@ interface ValentineCardProps {
 
 const ValentineCard: React.FC<ValentineCardProps> = ({ isAccepted }) => {
   // On encode le nom du fichier pour gérer les espaces
-  const photoPath = encodeURI("/metise.jpeg");
+  const photoPath = encodeURI("/melisat.jpg");
 
   return (
     <motion.div
