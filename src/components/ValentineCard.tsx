@@ -83,7 +83,7 @@ const ValentineCard: React.FC<ValentineCardProps> = ({ isAccepted }) => {
                 "Merci d'être la femme incroyabe que tu es. Je suis tellement fier de toi et du courage avec lequel tu portes notre enfant. Ce que tu fais pour nous me touche profondément."
               </p>
               <p className="text-rose-600 font-bold text-2xl">
-                Mon trésor ❤️
+                Je t'aime mon trésor ❤️
               </p>
             </div>
           </motion.div>
