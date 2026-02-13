@@ -80,7 +80,7 @@ const ValentineCard: React.FC<ValentineCardProps> = ({ isAccepted }) => {
 
             <div className="space-y-2">
               <p className="text-rose-500 font-serif italic text-xl">
-                "Pour toujours..."
+                "Merci d'être la femme que tu es. Je te remercie encore de porter notre enfant, car tu vis cette période avec beaucoup de courage et d'amour. Je t'aime, mon petit coeur ❤️"
               </p>
               <p className="text-rose-600 font-bold text-2xl">
                 Je t'aime. ❤️
